@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8">
+  <meta name="description" content="Sign Up Page Example">
+  <meta name="keywords" content="Better,Sigma,Homework,English">
+  <meta name="author" content="Divyang Verma so far">
+        <title>SignUp|example|</title>
+		<style>
+		
+		.h1 {
+  padding: 50px;
+  text-align: center;
+  font-size: 100%;
+  background-color: #00008B;
+  color: white;
+}
+
+	body{
+	background-image: url("thinkLOGO.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	border: black solid 10px;
+
+	}
+
+label {
+    display: block;
+    font: .9rem 'Fira Sans', sans-serif;
+}
+
+input[type='submit'],
+label {
+    margin-top: 1rem;
+	text-align: middle;
+}
+note{
+	color: red;
+	font: .6rem 'Fira Sans', sans-serif;
+}
+html1{
+	height:150px;
+	width: 300px;
+}
+
+.button {
+  border: black 4px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #00cc96;
+  width: 130px;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #ff531a;
+  position: sticky;
+  right: 0;
+  width: 100%;
+}
+
+.navbar a:hover {
+  float: left;
+  display: block;
+  background-color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}	
+
+
+.footer {
+   left: 0;
+   width:100%;
+   height:150px;
+   bottom: 0;
+   width: 100%;
+   background-color: darkgray;
+   color: white;
+   text-align: center;
+}
+
+.cen {
+align: center;
+}
+
+
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+  .column {
+    width: 320px;
+	height: 100%;
+  }
+
+
+</style>
+<script>
+//are you in the system?
+function checkName(){
+var Name=document.getElementById("Name").value;
+if( Name === "Divyang Verma" || Name === "Ben Hall" || Name === "Hacker"){// Replace Divyang Verma/Ben Hall/ Hacker with MySQL or access to php/sql
+	alert("Your password and username is already are in our system");
+}
+}
+
+//for telling the username
+function checkUserName(){
+var user = document.getElementById("user").value;
+document.cookie = "USER="+user; 
+alert("Your Username is:   " + user);              																																																																																																																																																																													 
+}
+
+//for telling the password
+function checkPassword(){
+var pass = document.getElementById("pass").value;
+document.cookie = "PASS="+pass; 
+//alert("Your Password is:   " + pass.length);
+}
+
+// the real checking
+function checkEmail(){
+var email=document.getElementById("email").value;
+if( email === "12733@stjoebears.com" || email==="random@gmail.com" || email==="hacker@gmail.com"){ // also use SQL/php for email
+checkName();
+}
+
+else{//This is bad, don't do this
+// want a mail?
+var str = "Send a email to you!";
+var result = str.link("mailto: email");
+document.getElementById("demo").innerHTML = result;
+checkUserName();
+checkPassword();
+alert("Thank you for Signing up");
+move();
+}
+}
+
+///////////////////
+
+function displayCookies() {
+var fname=getCookie("firstname");
+if (fname==null) {fname="";}
+if (fname!="") {fname="firstname="+fname;}
+var lname=getCookie("lastname");
+if (lname==null) {lname="";}
+if (lname!="") {lname="lastname="+lname;}
+alert (fname + " " + lname);
+}
+function getCookie(name) {
+var nameEQ = name + "=";
+var ca = document.cookie.split(';');
+for(var i=0;i < ca.length;i++) {
+var c = ca[i];
+while (c.charAt(0)==' ') c = c.substring(1);
+if (c.indexOf(nameEQ) != -1) return c.substring(nameEQ.length,c.length);
+}
+return null;
+} 
+
+</script>
+    </head>
+    <body>
+<div class="h1">
+        <h1>Sign Up</h1>
+	</div>
+	</div>
+	<div class="navbar">
+			<a href="StudentSignin.html">Sign in as a student</a>
+			<a href="index.html">Sign In As ...</a>
+			<!-- <a href="" style="opacity: 0.6; cursor: not-allowed;">----</a> -->
+		</div>
+
+<br><br>
+
+<div class="solid">
+	<div class="row">
+		<div class="column">
+			<div class="content">
+				
+				<div>
+				
+		<div>
+        <label for="u">Email (Optional):</label>
+        <input type="text" id="email" name="email" style="width: 300px;" />
+		
+		<br>
+		<label for="u"><b>Full</b> Name (Optional):</label>
+        <input type="text" id="Name" name="Name" style="width: 200px;" />
+		
+		<br>
+		<label for="u">Your Username:</label>
+        <input type="text" id="user" name="username" style="width: 200px;" />
+		
+		<br>
+		<label for="u">Your Password:</label>
+        <input type="password" id="pass" name="password" style="width: 200px;" />
+		</div>
+		
+		<br>
+    <input class="button" type="submit" value="Submit" onClick="checkEmail()">
+		<e id="demo"></e>
+		
+		<body style="align: center;">
+		<br><br><br><br>
+		</div>
+	</div>
+</div>
+
+<img style="align: right;" href="sigmathingy.png"></img>
+		
+    </body>
+</html>
