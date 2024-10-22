@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-   <title>Student Sign in</title>
-   <link rel="stylesheet" type="text/css" href="SignInStyle.css">
-   <script>
-      //Put stuff in here later
-   </script>
-</head>
+   <head>
+      <title>Student Sign in</title>
+      <link rel="stylesheet" type="text/css" href="SignInStyle.css">
+   </head>
 
-<body>
-<p>Student Sign In</p>
+   <body>
+      <p>Student Sign In</p>
     
-<form>
-  <label for="fname">Username:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Password:</label><br>
-  <input type="text" id="lname" name="lname" value="">
-</form>
-
- 
-
-    <button onclick="checkEmail()">
-      	Submit
-    </button>
-  
-    <script src="SignInCode.js"></script>
+      <form>
+        <label for="fname">Username:</label><br>
+        <input type="text" id="user" name="username" value=""><br>
    
-</body>
+        <label for="lname">Password:</label><br>
+        <input type="text" id="pass" name="password" value=""><br>
+   
+        <label for="lname">Name (Opt):</label><br>
+        <input type="text" id="Name" name="Name"  value=""><br>
+   
+        <label for="lname">Email (Opt):</label><br>
+        <input type="text" id="email" name="email"  value=""><br>
+   
+        <button onclick="checkEmail()">Submit</button>
+      </form>
+  
+      <script src="SignInCode.js"></script>
+   
+   </body>
 </html>
 
 
