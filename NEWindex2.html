@@ -1,119 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>WordSmith/Dothathomework</title>
-  <style>
-    $borderRadius: 10px;
-$spacer: 1rem;
-$primary: #C4151C;
-$text: #fff;
-$linkHeight: $spacer * 3.5;
-$timing: 250ms;
-$transition: $timing ease all;
-$linkWidth: 10rem;
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-body{
-  background:#000 url(https://unsplash.it/1600/1000/?random);
-  background-size:cover;
-  background-position:center;
-  font-family: 'Open Sans', sans-serif;
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-.header{
-    $ref: &;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.9);  
-    color: $text;
-    padding: 0 $spacer*2;
-    box-shadow: 0 0 40px rgba(0,0,0,0.03);
-    height: 6rem;
-    display: flex;
-    align-items:center;
-    gap: 3rem;
-  }
+li {
+  float: left;
+}
 
-  .navbar{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  &__menu{
-    position: relative;
-    display:flex;
-  }
-  &__link{
-    position:relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    align-items: center;
-    justify-content: center;
-    height: $linkHeight;
-    width: $linkWidth;
-    color: $text;
-    transition: $transition;
-    text-decoration: none;
-    width: $linkWidth;
-    text-transform: uppercase;
-    transition: 500ms ease all;
-    svg{
-      transition: 500ms ease all;
-    }
-    &:hover{
-      svg{
-        stroke: $primary;
-      }
-    }
-    .navbar:not(:hover) &:focus,
-    &:hover{
-      span{
-        opacity: 1;
-        transform: translate(0);
-      }
-    }
-    }}
- 
-  </style>
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #000000;
+}
+
+.active {
+  background-color: #001e57;
+}
+</style>
 </head>
 <body>
 
-<div class="header">  
-  <div class="header__logo">
-    <strong>MAKEALOGOBEN</strong>
-  </div>
-  <nav class="navbar">
-    <ul class="navbar__menu">
-      <li class="navbar__item">
-        <a href="#" class="navbar__link"><i data-feather="home"></i><span>Why Us?</span> </a>
-      </li>
-      <li class="navbar__item">
-        <a href="#" class="navbar__link"><i data-feather="info"></i><span>About</span></a>        
-      </li>
-      <li class="navbar__item">
-        <a href="#" class="navbar__link"><i data-feather="users"></i><span>Mr.Arbut</span></a>        
-      </li>
-      <li class="navbar__item">
-        <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Source Code</span></a>        
-      </li>
-      <li class="navbar__item">
-        <a href="#" class="navbar__link"><i data-feather="archive"></i><span>Resources</span></a>        
-      </li>
-      <li class="navbar__item">
-        <a href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Help</span></a>        
-      </li>
-      <li class="navbar__item">
-        <a href="BetterSignIn.html" class="navbar__link"><i data-feather="log-in"></i><span>Login</span></a>        
-      </li>
-    </ul>
-  </nav>
-</div>
+<ul>
+  <li><a href="#home">Why Us?</a></li>
+  <li><a href="#news">About</a></li>
+  <li><a href="#contact">Mr.Arbut</a></li>
+  <li style="float:right"><a class="active" href="BetterSignIn.html">Login</a></li>
+</ul>
 
-<script>feather.replace()</script>
 </body>
 </html>
-    
+
+
