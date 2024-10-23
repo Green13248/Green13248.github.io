@@ -2,8 +2,8 @@ CREATE DATABASE DoThatHomeWorkStudents;
 
 CREATE TABLE Persons (
     PersonID int,
-    Username varchar(255),
-    Password varchar(255),
-    Email varchar(255)
-    Securitykey varchar(255)
+    Username varchar(20),
+    Password varchar(20),
+    Email varchar(50)
+    Securitykey varchar(30)
 );
