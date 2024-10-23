@@ -1,9 +1,15 @@
-# Dothathomework
+# Dothathomework.com
 
-BTW Copilot says ...
+Best idea we have ever had
 
-WordSmiths.com
-EssayEcho.com
-HomeworkHaven.com
-StudyStream.com
-WriteWave.com
+#Authors
+
+Ben Hall
+
+Divyang Verma
+
+Maybe someday:
+
+Kaden Houser
+
+Aiden Sauer
