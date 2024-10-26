@@ -14,8 +14,8 @@ Ben Hall
 
 Divyang Verma
 
-Aiden Sauer
 
 # Maybe someday authors:
 
 Kaden Houser
+Aiden Sauer
