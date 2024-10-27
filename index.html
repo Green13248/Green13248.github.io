@@ -4,10 +4,11 @@
 <style>
 ul {
   list-style-type: none;
-  margin: -5;
-  padding: -5;
+    font-family: arial;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: #000521;
+  background-color: #00081f;
 }
 
 li {
@@ -22,18 +23,53 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color: #000000;
+li a:hover:not {
+  background-color: #00081f;
 }
 
-.active {
-  background-color: #001e57;
+li a:hover {
+  background-color: #010033;
 }
 
-first {
-  background-color: #001e57;
+.first {
+  background-color: #1f190c;
+  font-family: arial;
   height: 200px;
   font-size: 50px;
+  width: full;
+}
+.first .text{
+	 padding: 40px 30px;
+     color: white;
+     width: 400px;
+     float:left;
+}
+.first .pic{
+ 	padding: 40px 30px;
+    color: white;
+    width: 200px;
+    float:right;
+}
+
+.second {
+  background-color: #00081f;
+  font-family: arial;
+  height: 200px;
+  font-size: 50px;
+  width: full;
+}
+.second .text{
+	 padding: 40px 30px;
+     color: white;
+     text-align:right;
+     width: 300px;
+     float:right;
+}
+.second .pic{
+ 	padding: 40px 30px;
+      color: white;
+     width: 200px;
+     float:left;
 }
 
 </style>
@@ -41,15 +77,41 @@ first {
 <body>
 
 <ul>
-  <li><a class="active" href="#home">Why Us?</a></li>
+  <li><a href="#home">Why Us?</a></li>
   <li><a href="#About">About</a></li>
   <li><a href="#MrArbut">Educators</a></li>
   <li style="float:right"><a  href="BetterSignIn.html">Login</a></li>
 </ul>
 
-  <div type="first" >
-    <h>Helping kids succeed</h>
-  </div>
+  <section class="first">
+   <div class="text">
+   
+      <h>Helping kids succeed</h>
+      
+   </div>
+   <div class="pic">
+   
+      <h>Add Pic Here</h>
+      
+   </div>
+  </section>
+ <section class="second">
+    
+    
+    <div class="pic">
+   
+      <h>Add Pic Here</h>
+      
+   </div>
+   <div class="text">
+   
+      <h>Nice highlighting</h>
+      
+   </div>
+   
+ </section>
+  
+  
 
 </body>
 </html>
