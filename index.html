@@ -47,7 +47,7 @@ li a:hover {
 .first {
   background-color: var(--bar1);
   font-family: arial;
-  height: 200px;
+  height: 230px;
   font-size:50px;
   width: full;
 }
@@ -78,6 +78,10 @@ li a:hover {
      width: 300px;
      float:right;
 }
+
+.second .text .p{
+	  font-size: 10px;
+}
 .second .pic{
  	padding: 40px 30px;
       color:  var(--textColor);
@@ -103,6 +107,15 @@ background-color: lightgrey;
   display: flex;
 }
 
+h span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+
 </style>
 </head>
 <body>
@@ -116,9 +129,9 @@ background-color: lightgrey;
 
   <section class="first">
    <div class="text">
-   
-      <h>Helping kids succeed</h>
-      
+   <!--//THEFOLLOWINGCODEISFROMCODEPEN- 'Foolish Developer'-->
+      <h>I'm a "<span class="typed-text"></span><span class="cursor">&nbsp;</span>"</h><div style="font-size:10px;"><p>- AnyomanusUserPDiddy469clickhere</p></div>
+      <!--copied code ends here-->
    </div>
    <div class="pic">
    
@@ -187,6 +200,52 @@ background-color: lightgrey;
   alert("Window is too small to display text properly")
   myFunction_set();
   }
+
+
+	  //THEFOLLOWINGCODEISFROMCODEPEN- 'Foolish Developer'
+  
+   const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Winner", "Achiver", "Better Person", "Diddy"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { 
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+	  //copied code ends here
   </script>
   
   
