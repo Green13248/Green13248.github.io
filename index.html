@@ -2,6 +2,19 @@
 <html>
 <head>
 <style>
+
+:root {
+  --blue: #000000;
+  --white: #ffffff; 
+  --bar1: #1f190c; 
+  --bar2: #00081f;
+  --textColor: white;
+}
+
+body {
+  background-color: var(--blue);
+}
+
 ul {
   list-style-type: none;
     font-family: arial;
@@ -32,27 +45,27 @@ li a:hover {
 }
 
 .first {
-  background-color: #1f190c;
+  background-color: var(--bar1);
   font-family: arial;
   height: 200px;
-  font-size: 50px;
+  font-size:50px;
   width: full;
 }
 .first .text{
 	 padding: 40px 30px;
-     color: white;
-     width: 400px;
+     color: var(--textColor);
+     width: 300px;
      float:left;
 }
 .first .pic{
  	padding: 40px 30px;
-    color: white;
+    color:  var(--textColor);
     width: 200px;
     float:right;
 }
 
 .second {
-  background-color: #00081f;
+  background-color: var(--bar2);
   font-family: arial;
   height: 200px;
   font-size: 50px;
@@ -60,16 +73,34 @@ li a:hover {
 }
 .second .text{
 	 padding: 40px 30px;
-     color: white;
+     color:  var(--textColor);
      text-align:right;
      width: 300px;
      float:right;
 }
 .second .pic{
  	padding: 40px 30px;
-      color: white;
+      color:  var(--textColor);
      width: 200px;
      float:left;
+}
+
+.button{
+background-color: lightgrey;
+    width: 40%;
+    color: #080710;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button2 {background-color: grey; }
+
+.buttons{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
 }
 
 </style>
@@ -95,6 +126,7 @@ li a:hover {
       
    </div>
   </section>
+  
  <section class="second">
     
     
@@ -110,6 +142,53 @@ li a:hover {
    </div>
    
  </section>
+ 
+   <section class="first">
+   <div class="text">
+   
+      <h>Helping kids succeed</h>
+      
+   </div>
+   <div class="pic">
+   
+      <h>Add Pic Here</h>
+      
+   </div>
+  </section>
+  <div class="buttons">
+<button class="button" onClick="Light()"><p>LightMode</p></button>
+<div style="width:20%;"></div>
+  <button class="button button2" onClick="Dark()"><p>DarkMode</p></button>
+  </div>
+  <script>
+  
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  var r = document.querySelector(':root');
+  
+  function Light() {
+
+   r.style.setProperty('--blue', 'white');
+  r.style.setProperty('--bar1', '#faf5dc');
+  r.style.setProperty('--bar2', '#dce8fa');  
+  r.style.setProperty('--textColor', 'black');
+  }
+  
+   function Dark() {
+
+   r.style.setProperty('--blue', 'black');
+  r.style.setProperty('--bar1', '#1f190c');
+  r.style.setProperty('--bar2', '#00081f');  
+  r.style.setProperty('--textColor', 'white');
+  }
+  
+  
+  if(windowWidth < 652){
+  alert("Window is too small to display text properly")
+  myFunction_set();
+  }
+  </script>
+  
   
   
 
