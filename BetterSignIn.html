@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
      <!--//THEFOLLOWINGCODEISFROMCODEPEN- 'Foolish Developer'-->
 <head>
-    <title>Better Login</title>
- 
-   
+    <title>Login - DoThatHomework.com</title>
+ <meta name="keywords" content="DoThatHomework, DTH, dth">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTEW4OEQffoHtMVzrn1uTs47KaPtvg0NgLD7HguigfwjpNpRqiG">
+
+
     <style >
       *,
 *:before,
@@ -15,6 +18,7 @@
 }
 body{
     background-color: #00081f;
+    overflow: hidden;
 }
 .background{
     width: 430px;
@@ -30,14 +34,53 @@ body{
     position: absolute;
     border-radius: 50%;
 }
+
+.menu{
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    background-color: #001373;
+    border-radius: 50px;
+    left: 29.93%;
+    top: 7.5%;
+}
+
+@keyframes rotateS{
+   0%{rotate: 0deg;}
+   100%{rotate: 360deg;}
+   /*100%{rotate: 0deg;}*/
+}
+@keyframes expandM{
+   0%{width: 50px;}
+   100%{width: 430px;}
+   /*100%{rotate: 0deg;}*/
+}
+
+@keyframes shrinkM{
+   0%{width: 430px;}
+   100%{width: 50px;}
+   /*100%{rotate: 0deg;}*/
+}
+
+.menu:hover{
+animation: expandM 1s ;
+width:430px;
+
+}
+
 .shape:first-child{
     background: linear-gradient(
         #1845ad,
         #23a2f6
     );
-    left: -80px;
-    top: -80px;
+    left: -90px;
+    top: -90px;
 }
+.shape:first-child:hover{
+   animation: rotateS 1s;
+
+}
+
 .shape:last-child{
     background: linear-gradient(
         to right,
@@ -47,8 +90,17 @@ body{
     right: -80px;
     bottom: -80px;
 }
+
+
+.shape:last-child:hover{
+   animation: rotateS 1s;
+}
+
+
+
+
 form{
-    height: 520px;
+    height: 500px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -106,7 +158,15 @@ button{
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+      transition: background-color 0.7s;
+
 }
+
+button:hover {
+     background-color: #23a2f6;
+}
+
+
 .social{
   margin-top: 30px;
   margin-bottom: 10px;
@@ -131,6 +191,51 @@ button{
   margin-right: 4px;
 }
 
+a {
+    text-decoration: underline;
+          transition: color 1s;
+ 
+}
+
+a:hover:not{
+    color:white;
+    cursor:pointer;
+}
+a:hover{
+    color: #bfe6ff;
+}
+
+.menuButton{
+    width:15%;
+    background-color:  #f09819; 
+    border:none; 
+    position: absolute;
+    top: -50%;
+    left: 39%;
+    height: 66%;
+}
+
+.menuButton2{
+    width:15%;
+    background-color:  #f09819; 
+    border:none; 
+    position: absolute;
+     top: -50%;
+    left: 57.5%;
+    height: 66%;
+}
+
+.menuButton3{
+    width:15%;
+    background-color:  #f09819; 
+    border:none; 
+    position: absolute;
+     top: -50%;
+    left: 76%;
+    height: 66%;
+}
+
+
     </style>
 </head>
 <body>
@@ -138,20 +243,31 @@ button{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
+            <div class="menu">
+                <button class="menuButton"></button>
+                <button class="menuButton2"></button>
+                <button class="menuButton3"></button>
+            </div>
+
     <form>
         <h3>Sign In</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Username" id="username">
+        <input type="text" placeholder="Email or Name" id="username">
 
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
         <button>Log In</button>
+        <div style="height:30px;"></div>
+        <p style="text-align:center;">Don't have an account? <a style="text-decoration: underline; hover{color:blue;}">Sign up</a></p>
       <!--  <div class="social">
           <div class="go"><i class="GoogleIcon"></i>      Google</div>
           <div class="fb"><i class="TwitterIcon"></i>  X (apparently?)</div>
         </div>-->
     </form>
+    <br></br>
+    <br></br>
+    <br></br>
 </body>
 </html>
