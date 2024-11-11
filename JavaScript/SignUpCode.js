@@ -23,7 +23,7 @@ document.cookie = "PASS="+pass;
 
 // the real checking
 function checkEmail(){
-var email=document.getElementById("email").value;
+const email=document.getElementById("email").value;
 if( email === "12733@stjoebears.com" || email==="random@gmail.com" || email==="hacker@gmail.com"){ // also use SQL/php for email
 checkName();
 }
