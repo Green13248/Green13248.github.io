@@ -1,4 +1,4 @@
-# Dothathomework.com
+# Don'tdothathomework.com
 
 Best idea we have ever had
 
